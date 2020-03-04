@@ -67,7 +67,9 @@ const Layout = ({ children }) => {
             </section>
           ) : (
               <section className="section-msg1">
-                <span><FontAwesomeIcon icon={faTwitter} size='1x' spin color={'#fff'} style={{ marginTop: 5 }} title="Follow me on" /></span>
+                <a href="https://twitter.com/emmanuel_dal">
+                  <FontAwesomeIcon icon={faTwitter} size='1x' spin color={'#fff'} style={{ marginTop: 5 }} title="Follow me" />
+                </a>
               </section>
             )
         }

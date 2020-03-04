@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `emmadal`,
-    description: `Emmanuel Dalougou personnal blog website`,
+    title: `Emmanuel Dalougou`,
+    description: `Emmanuel Dalougou personnal website`,
     author: `Emmanuel Dalougou @emmadal <emmanueldalougou@gmail.com>`,
   },
   pathPrefix: `/gatsby-starter-darkmode`,
