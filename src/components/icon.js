@@ -4,6 +4,7 @@ import styled, { ThemeContext } from 'styled-components';
 const HeavenlyBody = styled.img`
   height: 30px;
   width: 30px;
+  margin-top: 25px;
   cursor: pointer;
   border-radius: 50%;
   user-select: none;

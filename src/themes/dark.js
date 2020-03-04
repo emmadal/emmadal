@@ -2,7 +2,7 @@
 
 export default {
   name: 'dark',
-  icon: require('../images/icons/moon.png'),
+  icon: require('../images/moon.svg'),
   colors: {
     background: '#29263E',
     cardBackground: '#403C5B',

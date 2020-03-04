@@ -10,12 +10,12 @@ const links = [
     href: '/',
   },
   {
-    title: 'Work',
-    href: '/work',
+    title: 'About',
+    href: '/about',
   },
   {
-    title: 'Contact',
-    href: '/contact',
+    title: 'Project',
+    href: '/project',
   },
 ]
 
@@ -53,7 +53,7 @@ const LinksItem = styled.li`
 const Header = ({ isDark, setIsDark }) => (
   <Container>
     <Icon isDark={isDark} setIsDark={setIsDark} />
-    <Links>
+    <Links style={{ fontFamily: "Indie Flower" }}>
       {links.map(link => (
         <LinksItem key={link.href}>
           <Link

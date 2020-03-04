@@ -2,7 +2,7 @@
 
 export default {
   name: 'light',
-  icon: require('../images/icons/sun.png'),
+  icon: require('../images/sun.svg'),
   colors: {
     background: '#ffffff',
     cardBackground: '#ffffff',

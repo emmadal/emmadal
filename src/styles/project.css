@@ -1,0 +1,37 @@
+.description {
+    font-size: 1.4rem;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.about {
+    font-size: 1.4rem;
+    line-height: 33px;
+    text-align: justify;
+}
+
+summary {
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    border: none;
+}
+
+summary,
+span {
+    font-family: 'Indie Flower';
+}
+
+summary:focus {
+    border-color: transparent;
+}
+
+a {
+    color: #9b9b9b;
+    font-size: 0.9rem;
+}
+
+.work-link {
+    color: #9b9b9b;
+    font-size: 1.4rem;
+    font-weight: bold;
+}

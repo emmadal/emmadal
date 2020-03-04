@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `John Doe`,
-    description: `John's Personal Website`,
-    author: `Somesh Kar @someshkar <somesh.kar@gmail.com>`,
+    title: `emmadal`,
+    description: `Emmanuel Dalougou personnal blog website`,
+    author: `Emmanuel Dalougou @emmadal <emmanueldalougou@gmail.com>`,
   },
   pathPrefix: `/gatsby-starter-darkmode`,
   plugins: [
@@ -26,20 +26,38 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icons/moon.png`, // This path is relative to the root of the site.
+        icon: `src/images/moon.svg`, // This path is relative to the root of the site.
       },
+    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `IBM Plex Sans`,
+    //         variants: [`400`, `700`],
+    //       },
+    //     ],
+    //   },
+    // },
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: [],
+        excludePaths: ["/"],
+        height: 5,
+        prependToBody: false,
+        color: `rgb(29, 161, 242)`
+      }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: `IBM Plex Sans`,
-            variants: [`400`, `700`],
-          },
-        ],
-      },
-    },
+        google: {
+          families: ['IBM Plex Sans', 'Droid Sans', 'Droid Serif']
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
