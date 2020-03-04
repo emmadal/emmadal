@@ -1,9 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-
 import Icon from './icon'
-
+import '../styles/header.css'
 const links = [
   {
     title: 'Home',
@@ -38,12 +37,14 @@ const Links = styled.ul`
   margin: 0;
   cursor: default;
   text-align: center;
+  font-font: 'IBM Plex Sans';
 `
 
 const LinksItem = styled.li`
   padding: 0;
   margin: 0;
   display: inline-block;
+  font-font: 'IBM Plex Sans';
   margin-left: 18px;
   cursor: pointer;
   color: ${props => props.theme.colors.textColor};
@@ -57,7 +58,7 @@ const Header = ({ isDark, setIsDark }) => (
       {links.map(link => (
         <LinksItem key={link.href}>
           <Link
-            style={{ color: 'inherit', textDecoration: 'none' }}
+            className="link"
             to={link.href}
           >
             {link.title}

@@ -722,16 +722,16 @@ pre tt:after {
     text-align: center;
     bottom: 0px;
     right: 0px;
-    height: 50px;
-    width: auto;
+    height: 40px;
+    width: 40px;
     display: flex;
     flex-wrap: row wrap;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 50%;
     border-color: rgb(29, 161, 242);
     background-color: rgb(29, 161, 242);
-    color: #fff;
+    color: #fff
 }
 
 .section-msg1 {

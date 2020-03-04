@@ -5,9 +5,10 @@ import styled from 'styled-components'
 import '../styles/layout.css'
 
 const Container = styled.div`
+  text-align:'justify';
   font-family: 'IBM Plex Sans';
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
   margin-top: 40px;
 `
 

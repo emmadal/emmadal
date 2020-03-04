@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTwitter} from "@fortawesome/free-brands-svg-icons"
 import Header from './header'
 import lightTheme from '../themes/light'
 import darkTheme from '../themes/dark'
@@ -22,6 +24,8 @@ const Div = styled.div`
 `
 
 const Layout = ({ children }) => {
+  const initialScroll = 0
+  const [height, setHeight] = useState(0)
   let localIsDark
 
   if (typeof window !== 'undefined') {
@@ -34,12 +38,39 @@ const Layout = ({ children }) => {
   }
 
   const [isDark, setIsDark] = useState(localIsDark)
+  const handleScrollTop = () => setHeight(window.scrollY)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScrollTop)
+    return () => window.removeEventListener('scroll', handleScrollTop)
+  })
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <Container>
         <Header isDark={isDark} setIsDark={setIsDark} />
-        <Div>{children}</Div>
+        <Div>
+          {children[0].props.title === 'Home' ? '' : (
+            <div>
+              <h1 style={{ marginTop: 13, color: 'rgb(29, 161, 242)' }}>{children[0].props.title}</h1>
+              {isDark ? <hr style={{ height: 2, backgroundColor: '#fff' }} /> : <hr style={{ height: 2 }} />}
+            </div>
+          )}
+          {children}
+        </Div>
+        {
+          height === initialScroll ? (
+            <section className="section-msg">
+              <a href="https://twitter.com/emmanuel_dal">
+                <FontAwesomeIcon icon={faTwitter} size='1x' color={'#fff'} style={{ marginTop: 5 }} title="Follow me" />
+              </a>
+            </section>
+          ) : (
+              <section className="section-msg1">
+                <span><FontAwesomeIcon icon={faTwitter} size='1x' spin color={'#fff'} style={{ marginTop: 5 }} title="Follow me on" /></span>
+              </section>
+            )
+        }
       </Container>
     </ThemeProvider>
   )
