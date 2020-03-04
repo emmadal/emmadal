@@ -26,20 +26,9 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/moon.svg`, // This path is relative to the root of the site.
+        icon: `src/images/logo.svg`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `IBM Plex Sans`,
-    //         variants: [`400`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-page-progress",
       options: {

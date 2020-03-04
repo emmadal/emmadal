@@ -49,8 +49,9 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <Container>
         <Header isDark={isDark} setIsDark={setIsDark} />
+        {console.log(children[0].props.title)}
         <Div>
-          {children[0].props.title === 'Home' ? '' : (
+          {children[0].props.title === 'Home' || '404' ? '' : (
             <div>
               <h1 style={{ marginTop: 13, color: 'rgb(29, 161, 242)' }}>{children[0].props.title}</h1>
               {isDark ? <hr style={{ height: 2, backgroundColor: '#fff' }} /> : <hr style={{ height: 2 }} />}
