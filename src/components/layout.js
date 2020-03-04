@@ -34,7 +34,6 @@ const Layout = ({ children }) => {
     } else {
       localIsDark = true
     }
-    console.log(localIsDark ? 'dark mode' : 'light mode')
   }
 
   const [isDark, setIsDark] = useState(localIsDark)
@@ -49,7 +48,6 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <Container>
         <Header isDark={isDark} setIsDark={setIsDark} />
-        {console.log(children[0].props.title)}
         <Div>
           {children[0].props.title === 'Home' || '404' ? '' : (
             <div>
