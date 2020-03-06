@@ -10,8 +10,6 @@ const Container = styled.div`
   font-size: 1.2rem;
   line-height: 2rem;
 `
-
-
 const ProjectPage = () => (
   <Layout>
     <SEO title="Project" />

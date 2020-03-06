@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitter} from "@fortawesome/free-brands-svg-icons"
+import { socialNetwork } from '../data'
 import Header from './header'
 import lightTheme from '../themes/light'
 import darkTheme from '../themes/dark'
@@ -22,10 +22,20 @@ const Div = styled.div`
   max-width:980px;
   padding:2rem;
 `
+const Icon = styled.div`
+  position: fixed;
+  margin: 40px;
+  padding: 10px;
+  text-align: center;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+`
 
 const Layout = ({ children }) => {
-  const initialScroll = 0
-  const [height, setHeight] = useState(0)
+  const [hscroll, setHScroll] = useState(0)
   let localIsDark
 
   if (typeof window !== 'undefined') {
@@ -37,7 +47,7 @@ const Layout = ({ children }) => {
   }
 
   const [isDark, setIsDark] = useState(localIsDark)
-  const handleScrollTop = () => setHeight(window.scrollY)
+  const handleScrollTop = () => setHScroll(window.scrollY)
 
   useEffect(() => {
     window.addEventListener('scroll', handleScrollTop)
@@ -50,28 +60,22 @@ const Layout = ({ children }) => {
         <Header isDark={isDark} setIsDark={setIsDark} />
         <Div>
           {children[0].props.title === 'Home' || '404' ? '' : (
-            <div>
+            <section>
               <h1 style={{ marginTop: 13, color: 'rgb(29, 161, 242)' }}>{children[0].props.title}</h1>
               {isDark ? <hr style={{ height: 2, backgroundColor: '#fff' }} /> : <hr style={{ height: 2 }} />}
-            </div>
+            </section>
           )}
           {children}
         </Div>
-        {
-          height === initialScroll ? (
-            <section className="section-msg">
-              <a href="https://twitter.com/emmanuel_dal">
-                <FontAwesomeIcon icon={faTwitter} size='1x' color={'#fff'} style={{ marginTop: 5 }} title="Follow me" />
-              </a>
-            </section>
-          ) : (
-              <section className="section-msg1">
-                <a href="https://twitter.com/emmanuel_dal">
-                  <FontAwesomeIcon icon={faTwitter} size='1x' spin color={'#fff'} style={{ marginTop: 5 }} title="Follow me" />
+        <Icon>
+            {
+              socialNetwork.map((m,key) =>(
+                <a href={m.link} key={key}>
+                  <FontAwesomeIcon icon={m.icon} size='2x' spin={hscroll === 0 ? false: true} color={isDark ?'#fff' : m.color} style={{ margin: 7 }} title={m.title}/>
                 </a>
-              </section>
-            )
-        }
+              ))
+            }
+        </Icon>
       </Container>
     </ThemeProvider>
   )

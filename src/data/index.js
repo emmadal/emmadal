@@ -1,3 +1,5 @@
+import {faTwitter, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
+
 const data = [
     {
         title: 'GraphQL server without database',
@@ -41,6 +43,28 @@ const data = [
         technology: 'HTML, CSS, Javascript',
         link: 'http://pi.lumen-corporation.com/'
     }
+]
+
+export const socialNetwork = [
+    {
+        link:"https://twitter.com/emmanuel_dal",
+        icon: faTwitter,
+        color:"#1DA1F2",
+        title:"Twitter"
+    },
+    {
+        link:"https://www.linkedin.com/in/emmanuel-dalougou-5b1a77156/",
+        icon:faLinkedin,
+        color:"#2867B2",
+        title:"Linkedin"
+    },
+    {
+        link:"https://github.com/emmadal",
+        icon: faGithub,
+        color:"#000",
+        title:"Github"
+    },
+
 ]
 
 export default data
