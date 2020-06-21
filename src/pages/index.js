@@ -21,9 +21,8 @@ function IndexPage() {
     const morning = 24
     const evening = 18
     if (
-      currentHour <= morning &&
-      currentHour <= afternoon &&
-      currentHour < evening
+      (currentHour <= morning && currentHour <= afternoon) ||
+      (currentHour > morning && currentHour > morning && currentHour > evening)
     ) {
       setMessage('Good Morning ⏰')
     }
