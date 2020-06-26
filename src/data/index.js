@@ -3,8 +3,13 @@ import {
   faLinkedin,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
-
 const data = [
+  {
+    title: 'React Weather',
+    description: 'React weather app to get the weather in realtime',
+    technology: 'React, Javascript',
+    link: 'https://myweather-react.netlify.app',
+  },
   {
     title: 'Deno REST API',
     description: 'REST API with Deno, Oak and MongoDB write in Typescript',
