@@ -8,7 +8,7 @@ const data = [
     title: 'React Weather',
     description: 'React weather app to get the weather in realtime',
     technology: 'React, Javascript',
-    link: 'https://myweather-react.netlify.app',
+    link: 'https://myreact-weather.netlify.app
   },
   {
     title: 'Deno REST API',
@@ -20,7 +20,7 @@ const data = [
     title: 'Movie Master',
     description: 'Provide a website for the movies',
     technology: 'React, Javascript',
-    link: 'https://moviemaster.netlify.com/',
+    link: 'https://moviemaster.netlify.app/',
   },
   {
     title: 'Music Master',
