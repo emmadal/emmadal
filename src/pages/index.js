@@ -24,13 +24,13 @@ function IndexPage() {
       (currentHour <= morning && currentHour <= afternoon) ||
       (currentHour > morning && currentHour > morning && currentHour > evening)
     ) {
-      setMessage('Good Morning ⏰')
+      setMessage('Good Morning')
     }
     if (currentHour >= afternoon && currentHour <= evening) {
-      setMessage('Good afternoon 🍲')
+      setMessage('Good afternoon')
     }
     if (currentHour >= evening) {
-      setMessage('Good evening 🛌')
+      setMessage('Good evening')
     }
   }
   useEffect(() => {
