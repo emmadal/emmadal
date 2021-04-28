@@ -5,15 +5,11 @@ import Icon from './icon'
 import '../styles/header.css'
 const links = [
   {
-    title: 'Home',
+    title: 'HOME',
     href: '/',
   },
   {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'Project',
+    title: 'PROJECT',
     href: '/project',
   },
 ]
@@ -37,15 +33,16 @@ const Links = styled.ul`
   margin: 0;
   cursor: default;
   text-align: center;
-  font-font: 'IBM Plex Sans';
+  font-font: 'Caveat';
 `
 
 const LinksItem = styled.li`
   padding: 0;
   margin: 0;
   display: inline-block;
-  font-font: 'IBM Plex Sans';
+  font-font: 'Caveat';
   margin-left: 18px;
+  font-size: 30px;
   cursor: pointer;
   color: ${props => props.theme.colors.textColor};
   user-select: none;
@@ -54,13 +51,10 @@ const LinksItem = styled.li`
 const Header = ({ isDark, setIsDark }) => (
   <Container>
     <Icon isDark={isDark} setIsDark={setIsDark} />
-    <Links style={{ fontFamily: "Indie Flower" }}>
+    <Links>
       {links.map(link => (
         <LinksItem key={link.href}>
-          <Link
-            className="link"
-            to={link.href}
-          >
+          <Link className="link" to={link.href}>
             {link.title}
           </Link>
         </LinksItem>

@@ -5,11 +5,22 @@ import styled from 'styled-components'
 import '../styles/layout.css'
 
 const Container = styled.div`
-  text-align: 'justify';
-  font-family: 'IBM Plex Sans';
-  font-size: 1.3rem;
-  line-height: 1.9rem;
   margin-top: 40px;
+`
+const Text = styled.p`
+  font-family: Caveat;
+  line-height: 1.1;
+  font-size: 3.7rem;
+`
+const Span = styled.span`
+  font-family: Caveat;
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 200;
+`
+const Title = styled.h1`
+  font-family: Caveat;
+  font-weight: 100;
 `
 
 function IndexPage() {
@@ -24,13 +35,13 @@ function IndexPage() {
       (currentHour <= morning && currentHour <= afternoon) ||
       (currentHour > morning && currentHour > morning && currentHour > evening)
     ) {
-      setMessage('Good Morning')
+      setMessage('Good Morning ☕')
     }
     if (currentHour >= afternoon && currentHour <= evening) {
-      setMessage('Good afternoon')
+      setMessage('Good afternoon 🎉')
     }
     if (currentHour >= evening) {
-      setMessage('Good evening')
+      setMessage('Good evening 🛏️')
     }
   }
   useEffect(() => {
@@ -41,22 +52,16 @@ function IndexPage() {
     <Layout>
       <SEO title="Home" />
       <Container>
-        <h1>
-          Hi people <span role="img">✋</span>, {message}
-        </h1>
-        <h2 style={{ lineHeight: 1.6 }}>
-          My name is Emmanuel Dalougou, Front End developer{' '}
-          <span role="img">💻</span> living in Ivory Coast
-        </h2>
-        <p>
-          I love thing about Javascript, GraphQL, React, NodeJS, Typescript and
-          Deno.
-        </p>
-        <p>
-          My hobbies are the football, music and the food{' '}
-          <span role="img">😋</span>.
-        </p>
-        <p>Feel free to send me a message on my social network.</p>
+        <Title>
+          <span role="img"></span> {message}
+        </Title>
+        <Text>
+          I'm Emmanuel Dalougou, Front End developer from Ivory coast
+          <span role="img" aria-label="flag"> 🇨🇮</span>
+        </Text>
+        <Span>
+          I work remotely with some compagnies to achieve their projects. I love things about Javascript, GraphQL, React, Typescript and Deno.
+        </Span>
       </Container>
     </Layout>
   )

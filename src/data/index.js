@@ -50,7 +50,7 @@ export const socialNetwork = [
     title: 'Twitter',
   },
   {
-    link: 'https://www.linkedin.com/in/emmanuel-dalougou-5b1a77156/',
+    link: 'https://www.linkedin.com/in/edalougou/',
     icon: faLinkedin,
     color: '#2867B2',
     title: 'Linkedin',

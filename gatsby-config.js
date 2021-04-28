@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Emmanuel Dalougou`,
-    description: `Emmanuel Dalougou personnal website`,
+    description: `Emmanuel Dalougou blog`,
     author: `Emmanuel Dalougou @emmadal <emmanueldalougou@gmail.com>`,
   },
   pathPrefix: `/gatsby-starter-darkmode`,
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe`,
-        short_name: `John's Website`,
+        name: `Emmanuel Dalougou`,
+        short_name: `Emmanuel Dalougou blog`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -30,23 +30,23 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-page-progress",
+      resolve: 'gatsby-plugin-page-progress',
       options: {
         includePaths: [],
-        excludePaths: ["/"],
+        excludePaths: ['/'],
         height: 5,
         prependToBody: false,
-        color: `rgb(29, 161, 242)`
-      }
+        color: `rgb(29, 161, 242)`,
+      },
     },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['IBM Plex Sans', 'Droid Sans', 'Droid Serif']
-        }
-      }
-    }
+          families: ['IBM Plex Sans', 'Pixel Matrix', 'Caveat', 'New Tegomin'],
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
